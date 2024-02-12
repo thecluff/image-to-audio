@@ -10,6 +10,10 @@ This requires installing the following python modules: numpy, simpleaudio, wavio
 
 Additionally, imagemagick needs to be installed.
 
+ - python - m pip install numpy && python - m pip install simpleaudio && python - m pip install wavio && python - m pip install Pillow
+
+ - brew install imagemagick (or arch -arm64 brew install imagemagick, if using arm64)
+
 ---
 
 To spice things up further, extra audio processing can be applied to resulting audio, which I wrote in C++. The github repository can be fund here: https://github.com/thecluff/CluffAudio/tree/main/C%2B%2B
@@ -42,6 +46,8 @@ Example values that can be set for processing effects:
 
 --- 
 
-To run everything, I wrote a shell script which takes care of everything for the user.
+## Usage
 
-jpg-example.sh or png-example.sh
+To run everything, I wrote a shell script which takes care of everything for the user. The program takes about 45 seconds to finish running. Note that Imagemagick may throw a warning, but the program will still run.
+
+In terminal, run **jpg-example.sh** or **png-example.sh**
