@@ -27,23 +27,15 @@ These additional processing effects include:
 
 I've included the actual executables in the root directory, but the .cpp files can be found in ./processingSrc
 
-Example values that can be set for each processing effect:
+Example values that can be set for processing effects:
 
 - Rectify: ./FinalProject2 output.wav outputRectified.wav 1 3 
 - Fade in ./FinalProject2 output.wav outputFadeIn.wav 1 4 1.0
 - Fade out ./FinalProject2 output.wav outputFadeOut.wav 1 5 1.0
 - Mono to stereo: ./MonoToStereo output.wav outputStereo.wav
 
+--- 
 
-To merge the two projects together, a shell script would allow users to specify an input image file, duration, min and max frequencies, resolution, contrast, as well as post-processing effect to be applied to the resulting audio. (Not yet written)
+To run this, I wrote a shell script which takes care of everything for the user.
 
-This entails a rather long command for the user to enter, so I have provided an example below.
-
----
-Image to Audio + Rectify (Distortion):
-
-input_image.jpg -> specrographic -> cluffAudioProcessing -> output.wav
-
-To convert an image to audio and then rectify the signal (input.JPG -> output.WAV -> rectifyOutput.WAV), one would use this command:
-
-python spectrographic.py --image source.png --min_freq 10000 --max_freq 20000 --duration 10 --save sound.wav && FinalProject2 sound.wav outputRectified.wav 1 3
+jpg-example.sh or png-example.sh
